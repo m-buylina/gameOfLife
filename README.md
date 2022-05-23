@@ -1,0 +1,2 @@
+# gameOfLife
+Start ui.py
