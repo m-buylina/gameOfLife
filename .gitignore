@@ -1,0 +1,4 @@
+# User-specific stuff:
+.DS_Store
+# build data
+__pycache__/
