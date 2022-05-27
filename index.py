@@ -4,7 +4,7 @@ from pygame.locals import *
 from sys import exit
 import random
 
-import main
+import game
 
 SIZE = 500
 GAP = 20
@@ -19,14 +19,13 @@ pygame.display.set_caption('Game of life')
 
 test_s = pygame.Surface((10, 10))
 test_s.fill(color = 'Red')
-human_surface = pygame.image.load('img/icon-human.png')
 test_font = pygame.font.SysFont('Arial', 22)
 
 
 
 board = [[random.randint(0, 1) for i in range(FIELDS)] for j in range(FIELDS)]
 
-main.print_board(board, 0)
+game.print_board(board, 0)
 age = 0
 
 while True:
@@ -44,7 +43,7 @@ while True:
                 y = GAP * i + MARGIN
                 pygame.draw.rect(screen, "Red", (x, y, GAP, GAP))
 
-    board = main.next_state(board)
+    board = game.next_state(board)
 
     #grid
     [pygame.draw.line(screen, 'Black', (x, MARGIN), (x, SIZE + MARGIN)) for x in range(GAP, SIZE, GAP)]

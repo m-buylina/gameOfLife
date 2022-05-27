@@ -6,15 +6,6 @@
 # 4. If a cell is OFF and has exactly three neighbors that are ON, it turns ON.
 
 
-
-board = [
-    [1, 1, 1, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 1],
-    ]
-
 def print_board(b, age):
     print('AGE: ' + str(age))
     for i in b:
@@ -75,11 +66,3 @@ def next_state(board):
                     new_board[i][j] = 1
 
     return new_board
-
-# current_age = board
-# print_board(current_age, 0)
-# for i in range(10):
-#     current_age = next_state(current_age)
-#     print_board(current_age, i+1)
-
-
