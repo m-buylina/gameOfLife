@@ -1,2 +1,1 @@
-# gameOfLife
-Start ui.py
+Classic Conway's Game of Life with using pygame
